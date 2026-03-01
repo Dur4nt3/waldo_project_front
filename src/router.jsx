@@ -1,11 +1,13 @@
 import { createBrowserRouter } from 'react-router';
 
-import App from './App.jsx';
+import Root from './modules/routes/root/Root';
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <App />,
+        element: <Root />,
+        errorElement: <h1>WIP</h1>,
+        hydrateFallbackElement: <h1>WIP</h1>,
     },
 ]);
 

@@ -1,0 +1,34 @@
+.corner {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    opacity: 0.3;
+}
+
+.corner-tl {
+    top: 1.5rem;
+    left: 1.5rem;
+    border-top: 2px solid var(--primary-color);
+    border-left: 2px solid var(--primary-color);
+}
+
+.corner-tr {
+    top: 1.5rem;
+    right: 1.5rem;
+    border-top: 2px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
+}
+
+.corner-bl {
+    bottom: 1.5rem;
+    left: 1.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    border-left: 2px solid var(--primary-color);
+}
+
+.corner-br {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
+}

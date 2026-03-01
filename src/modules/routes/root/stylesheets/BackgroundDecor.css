@@ -1,0 +1,59 @@
+.bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background:
+        radial-gradient(
+            ellipse 80% 60% at 50% 50%,
+            var(--primary-extremely-low-opacity) 0%,
+            transparent 70%
+        ),
+        radial-gradient(
+            ellipse 40% 40% at 50% 50%,
+            var(--accent-extremely-low-opacity) 0%,
+            transparent 60%
+        );
+}
+
+/* horizontal lines */
+.bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.15) 2px,
+        rgba(0, 0, 0, 0.15) 4px
+    );
+    pointer-events: none;
+}
+
+/* Animated grid */
+.grid-lines {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background-image:
+        linear-gradient(
+            var(--primary-extremely-low-opacity) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            var(--primary-extremely-low-opacity) 1px,
+            transparent 1px
+        );
+    background-size: 4rem 4rem;
+    animation: gridDrift 20s linear infinite;
+}
+
+@keyframes gridDrift {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 4rem 4rem;
+    }
+}

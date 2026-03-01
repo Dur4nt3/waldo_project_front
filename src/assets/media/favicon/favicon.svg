@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512"><defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a2a3a"></stop>
+      <stop offset="100%" stop-color="#0d1820"></stop>
+    </radialGradient>
+    <radialGradient id="spotlightGrad" cx="50%" cy="40%" r="45%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.18"></stop>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"></stop>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+      <feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"></feGaussianBlur>
+      <feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+    </filter>
+    <clipPath id="roundRect">
+      <rect width="512" height="512" rx="96" ry="96"></rect>
+    </clipPath>
+  </defs><rect width="512" height="512" rx="96" ry="96" fill="url(#bgGrad)"></rect><rect width="512" height="512" rx="96" ry="96" fill="url(#spotlightGrad)"></rect><g opacity="0.12" fill="#00d4ff">
+    <circle cx="64" cy="80" r="3"></circle><circle cx="128" cy="80" r="3"></circle><circle cx="192" cy="80" r="3"></circle>
+    <circle cx="256" cy="80" r="3"></circle><circle cx="320" cy="80" r="3"></circle><circle cx="384" cy="80" r="3"></circle>
+    <circle cx="448" cy="80" r="3"></circle>
+    <circle cx="64" cy="144" r="3"></circle><circle cx="128" cy="144" r="3"></circle><circle cx="192" cy="144" r="3"></circle>
+    <circle cx="256" cy="144" r="3"></circle><circle cx="320" cy="144" r="3"></circle><circle cx="384" cy="144" r="3"></circle>
+    <circle cx="448" cy="144" r="3"></circle>
+    <circle cx="64" cy="400" r="3"></circle><circle cx="128" cy="400" r="3"></circle><circle cx="192" cy="400" r="3"></circle>
+    <circle cx="256" cy="400" r="3"></circle><circle cx="320" cy="400" r="3"></circle><circle cx="384" cy="400" r="3"></circle>
+    <circle cx="448" cy="400" r="3"></circle>
+    <circle cx="64" cy="464" r="3"></circle><circle cx="128" cy="464" r="3"></circle><circle cx="192" cy="464" r="3"></circle>
+    <circle cx="256" cy="464" r="3"></circle><circle cx="320" cy="464" r="3"></circle><circle cx="384" cy="464" r="3"></circle>
+    <circle cx="448" cy="464" r="3"></circle>
+  </g><g opacity="0.45" fill="#2a4a6a">
+    <!-- figure 1 -->
+    <circle cx="72" cy="200" r="18"></circle>
+    <rect x="56" y="220" width="32" height="45" rx="8"></rect>
+    <!-- figure 2 -->
+    <circle cx="136" cy="195" r="18"></circle>
+    <rect x="120" y="215" width="32" height="45" rx="8"></rect>
+    <!-- figure 3 -->
+    <circle cx="200" cy="203" r="18"></circle>
+    <rect x="184" y="223" width="32" height="45" rx="8"></rect>
+    <!-- figure 5 -->
+    <circle cx="312" cy="198" r="18"></circle>
+    <rect x="296" y="218" width="32" height="45" rx="8"></rect>
+    <!-- figure 6 -->
+    <circle cx="376" cy="205" r="18"></circle>
+    <rect x="360" y="225" width="32" height="45" rx="8"></rect>
+    <!-- figure 7 -->
+    <circle cx="440" cy="196" r="18"></circle>
+    <rect x="424" y="216" width="32" height="45" rx="8"></rect>
+  </g><g opacity="0.28" fill="#1e3a52">
+    <circle cx="96" cy="310" r="16"></circle>
+    <rect x="82" y="328" width="28" height="40" rx="7"></rect>
+    <circle cx="160" cy="305" r="16"></circle>
+    <rect x="146" y="323" width="28" height="40" rx="7"></rect>
+    <circle cx="352" cy="308" r="16"></circle>
+    <rect x="338" y="326" width="28" height="40" rx="7"></rect>
+    <circle cx="416" cy="312" r="16"></circle>
+    <rect x="402" y="330" width="28" height="40" rx="7"></rect>
+  </g><circle cx="256" cy="255" r="72" fill="none" stroke="#00d4ff" stroke-width="4" opacity="0.9" filter="url(#softGlow)"></circle><circle cx="256" cy="255" r="72" fill="#00d4ff" opacity="0.06"></circle><line x1="310" y1="309" x2="348" y2="350" stroke="#00d4ff" stroke-width="10" stroke-linecap="round" opacity="0.9" filter="url(#glow)"></line><line x1="310" y1="309" x2="348" y2="350" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.4"></line><g filter="url(#glow)">
+    <!-- Body -->
+    <rect x="232" y="248" width="48" height="62" rx="12" fill="#ff3cac"></rect>
+    <!-- Head -->
+    <circle cx="256" cy="232" r="24" fill="#ff3cac"></circle>
+    <!-- Eyes — white dots -->
+    <circle cx="247" cy="230" r="4" fill="#fff"></circle>
+    <circle cx="265" cy="230" r="4" fill="#fff"></circle>
+    <!-- Pupils -->
+    <circle cx="248" cy="231" r="2" fill="#1a2a3a"></circle>
+    <circle cx="266" cy="231" r="2" fill="#1a2a3a"></circle>
+    <!-- Smile -->
+    <path d="M248 241 Q256 249 264 241" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"></path>
+    <!-- Little hat/marker -->
+    <rect x="240" y="208" width="32" height="8" rx="4" fill="#00d4ff"></rect>
+    <rect x="248" y="196" width="16" height="14" rx="4" fill="#00d4ff"></rect>
+  </g><g fill="#ff3cac" opacity="0.8" filter="url(#glow)">
+    <polygon points="200,215 204,227 216,227 207,234 210,246 200,239 190,246 193,234 184,227 196,227" transform="scale(0.5) translate(200,180)"></polygon>
+  </g><g fill="#00d4ff" opacity="0.7" filter="url(#glow)">
+    <polygon points="300,160 303,170 313,170 305,176 308,186 300,180 292,186 295,176 287,170 297,170" transform="scale(0.45) translate(280,140)"></polygon>
+  </g><rect x="0" y="430" width="512" height="82" rx="0" fill="#0d1820" opacity="0.7" clip-path="url(#roundRect)"></rect><rect x="0" y="427" width="512" height="3" fill="#00d4ff" opacity="0.6"></rect><text x="256" y="484" font-family="'Arial Black', 'Impact', sans-serif" font-size="38" font-weight="900" letter-spacing="6" text-anchor="middle" fill="#00d4ff" filter="url(#glow)">FIND</text><text x="256" y="484" font-family="'Arial Black', 'Impact', sans-serif" font-size="38" font-weight="900" letter-spacing="6" text-anchor="middle" fill="url(#bgGrad)" opacity="0">FIND</text></svg>
