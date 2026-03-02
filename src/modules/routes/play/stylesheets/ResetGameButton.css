@@ -1,0 +1,61 @@
+.reset-game-button {
+    margin-top: auto;
+    
+    min-height: calc(1lh + 0.4rem * 2);
+    width: max-content;
+
+    animation: fadeUp 0.7s 0.8s ease both;
+}
+
+.reset-game-button:hover,
+.reset-game-button:focus {
+    color: var(--negative-color);
+    border-bottom-color: var(--negative-color);
+}
+
+.reset-game-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--background-color);
+
+    border: 1px solid var(--primary-very-low-opacity);
+    padding: 1rem;
+
+    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+}
+
+.reset-game-dropdown .reset-game-notice {
+    font-size: var(--fs-base);
+}
+
+.reset-game-dropdown .confirm-game-reset {
+    margin-top: 0.75rem;
+
+    font-size: var(--fs-base);
+    font-weight: 700;
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--dark-text);
+
+    background: var(--negative-color);
+
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.1rem 0.4rem;
+    
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+.reset-game-dropdown .confirm-game-reset:hover {
+    transform: translateY(-2px);
+}
+
+.reset-game-dropdown .confirm-game-reset:active {
+    transform: scale(0.98);
+}
