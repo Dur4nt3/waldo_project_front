@@ -3,28 +3,6 @@
     display: block;
 }
 
-.homepage-actions a.clear-button-design {
-    text-align: center;
-    font-weight: 600;
-    letter-spacing: 0.15rem;
-    text-transform: uppercase;
-    color: var(--light-text);
-
-    background: transparent;
-
-    border: 1px solid rgba(232, 244, 248, 0.35);
-
-    cursor: pointer;
-    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
-    transition: 0.2s;
-}
-
-.homepage-actions a.clear-button-design:hover {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-    background: var(--primary-extremely-low-opacity);
-}
-
 .homepage-actions .play-game {
     font-size: var(--fs-lg);
     font-weight: 700;

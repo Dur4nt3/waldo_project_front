@@ -1,0 +1,122 @@
+.play-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    padding: 0.35rem;
+
+    background-color: var(--background-color);
+
+    border-bottom: 1px solid var(--primary-separator-border);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.play-header .header-info {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.play-header .header-info h1 {
+    font-size: var(--fs-base);
+    white-space: nowrap;
+    font-weight: 700;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    color: var(--light-text);
+}
+
+.play-header .header-info h1 > span {
+    color: var(--primary-color);
+    text-shadow: var(--primary-text-shadow-minimal);
+}
+
+.play-header .header-info .level-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--primary-separator-border);
+    clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+    background: var(--primary-extremely-low-opacity);
+}
+
+.play-header .header-info .level-indicator .level-label {
+    font-size: var(--fs-sm);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--light-subtext-sharper);
+}
+
+.play-header .header-info .level-indicator .level-pips {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.play-header .header-info .level-indicator .level-pips .pip {
+    width: 1.35rem;
+    height: 0.25rem;
+    background: var(--primary-very-low-opacity);
+    transition: 0.3s;
+}
+
+.play-header .header-info .level-indicator .level-pips .pip.active {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 6px var(--primary-low-opacity);
+}
+
+.play-header .header-info .level-indicator .level-pips .pip.done {
+    background-color: var(--primary-half-opacity);
+}
+
+.play-header .header-action {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.play-header .header-action button {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: var(--light-text);
+
+    background: transparent;
+    clip-path: polygon(5px 0%, 100% 0%, calc(100% - 5px) 100%, 0% 100%);
+
+    border: 1px solid rgba(232,244,248,0.1);
+    padding: 0.3rem 0.9rem;
+    
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: 0.2s;
+}
+
+.play-header .header-action button:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+@media (min-width: 40rem) {
+    .play-header {
+        padding: 0.5rem;
+    }
+
+    .play-header .header-info {
+        justify-content: start;
+        gap: 1.5rem;
+    }
+
+    .play-header .header-info h1 {
+        font-size: var(--fs-md);
+    }
+}
