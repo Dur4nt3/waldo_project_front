@@ -1,37 +1,63 @@
-import Panzoom from '@panzoom/panzoom';
 import { useRef } from 'react';
 import usePanzoom from '../../utilities/hooks/usePanzoom';
 
+import zoomImage from '../../utilities/ui/zoomImage';
+import getMarkerPosition from '../../utilities/ui/getMarkerPosition';
+
 import './stylesheets/PlayAreaCont.css';
 
-export default function PlayAreaCont({ image }) {
+export default function PlayAreaCont({
+    image,
+    placingMarker,
+    markers,
+    addMarkerPosition,
+}) {
     const panzoomRef = useRef();
     const imageRef = useRef();
+    const canvasRef = useRef();
 
     usePanzoom(image, imageRef, panzoomRef);
 
     return (
         <div className='play-area-cont'>
-            <div className='image-canvas'>
+            <div className='image-canvas' ref={canvasRef}>
                 <img
                     src={image}
                     alt='Find the character within this image'
                     ref={imageRef}
-                    onWheel={(event) => {
-                        // Prevent page scrolling
-                        // event.preventDefault();
-
-                        if (!panzoomRef.current) {
+                    onWheel={(event) => zoomImage(event, panzoomRef)}
+                    onClick={(event) => {
+                        if (!placingMarker) {
                             return;
                         }
 
-                        if (event.deltaY < 0) {
-                            panzoomRef.current.zoomIn();
-                        } else if (event.deltaY > 0) {
-                            panzoomRef.current.zoomOut();
-                        }
+                        const markerPosition = getMarkerPosition(
+                            event,
+                            canvasRef,
+                            imageRef,
+                            panzoomRef
+                        );
+
+                        addMarkerPosition(placingMarker, markerPosition);
                     }}
                 />
+
+                {Object.keys(markers).map((markerId) => {
+                    if (markers[markerId] === null) {
+                        return;
+                    }
+
+                    return (
+                        <div
+                            className='marker'
+                            key={markerId}
+                            style={{
+                                left: `${markers[markerId].pctX * 100}%`,
+                                top: `${markers[markerId].pctY * 100}%`,
+                            }}
+                        ></div>
+                    );
+                })}
             </div>
 
             <div className='canvas-options'>

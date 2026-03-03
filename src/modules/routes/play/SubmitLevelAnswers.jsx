@@ -1,6 +1,6 @@
 import { useFetcher } from 'react-router';
 
-import FormLoader from '../../utilities/MiscComponents/FormLoader';
+import FormLoader from '../../utilities/miscComponents/FormLoader';
 
 import './stylesheets/SubmitLevelAnswers.css';
 

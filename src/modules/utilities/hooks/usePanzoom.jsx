@@ -10,6 +10,7 @@ export default function usePanzoom(imageSrc, imageRef, panzoomRef) {
 
         // eslint-disable-next-line new-cap
         panzoomRef.current = Panzoom(imageRef.current, {
+            minScale: 1,
             maxScale: 15
         });
 

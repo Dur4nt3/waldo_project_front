@@ -1,4 +1,4 @@
-import canFitPips from '../../utilities/UI/CanFitPips';
+import canFitPips from '../../utilities/ui/canFitPips';
 
 import './stylesheets/PlayHeader.css';
 
@@ -41,7 +41,7 @@ export default function PlayHeader({ levelCount, levelsCompleted }) {
                     )}
 
                     <p className='level-label levels-completed'>
-                        {levelsCompleted}/{levelCount}
+                        {levelsCompleted + 1}/{levelCount}
                     </p>
                 </div>
             </div>
