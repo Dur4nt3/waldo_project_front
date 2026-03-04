@@ -1,6 +1,4 @@
 function MarkerState({ placingMarker, markers, currentMarkerId }) {
-    console.log(markers, currentMarkerId);
-
     if (placingMarker === currentMarkerId) {
         return <p className='currently-placing-marker'>PLACING</p>;
     }

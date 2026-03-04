@@ -19,12 +19,15 @@ export default function Play() {
     // Mock data determined from loader response
     const characters = {
         1: {
-            name: 'Pencilvester'
+            name: 'Pencilvester',
+            // eslint-disable-next-line quotes
+            description: "He's a pencil...",
         },
         2: {
-            name: 'Summer'
-        }
-    }
+            name: 'Summer',
+            description: 'Red haired girl with a pink shirt'
+        },
+    };
 
     // TODO: Potentially add a useEffect that syncs the state with characterIds
     // TODO: I.e., if the contents of characterIds change, re-initialize the state

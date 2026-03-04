@@ -65,6 +65,7 @@ export default function LevelMarkers({
                             characters={characters}
                             markerId={markerId}
                             addMarkerPosition={addMarkerPosition}
+                            setPlacingMarker={setPlacingMarker}
                         />
                     </LevelMarkerDropdownCont>
                 ))}
