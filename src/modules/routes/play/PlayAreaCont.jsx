@@ -9,6 +9,7 @@ import './stylesheets/PlayAreaCont.css';
 export default function PlayAreaCont({
     image,
     placingMarker,
+    setPlacingMarker,
     markers,
     addMarkerPosition,
 }) {
@@ -38,6 +39,7 @@ export default function PlayAreaCont({
                             panzoomRef
                         );
 
+                        setPlacingMarker(null);
                         addMarkerPosition(placingMarker, markerPosition);
                     }}
                 />

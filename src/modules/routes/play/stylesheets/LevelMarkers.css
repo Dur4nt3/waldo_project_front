@@ -1,0 +1,172 @@
+.open-markers-menu {
+    align-self: center;
+
+    padding: 0.25rem 1.5rem;
+    margin-top: 1.5rem;
+    border: 1px solid var(--primary-very-low-opacity);
+
+    max-width: max-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+
+    font-size: var(--fs-sm);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    background-color: var(--misc-interactable-color);
+
+    cursor: pointer;
+
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+
+    transition: 0.2s;
+}
+
+.open-markers-menu:has(img.menu-open),
+.open-markers-menu:hover {
+    border-color: var(--primary-half-opacity);
+    color: var(--primary-color);
+}
+
+.open-markers-menu > img {
+    width: 12px;
+    height: 12px;
+
+    transition: 0.2s;
+}
+
+.open-markers-menu > img.menu-open {
+    transform: rotate(180deg);
+}
+
+.open-markers-menu > img.menu-open,
+.open-markers-menu:hover > img {
+    filter: brightness(0) saturate(100%) invert(81%) sepia(39%) saturate(6861%)
+        hue-rotate(148deg) brightness(100%) contrast(109%);
+}
+
+.level-markers-dropdown {
+    min-width: 18.5rem;
+
+    background-color: var(--background-color);
+
+    border: 1px solid var(--primary-very-low-opacity);
+    padding: 0;
+    border-radius: 0;
+
+    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+
+    transition: 0.2s ease;
+}
+
+.level-markers-dropdown > h2 {
+    text-align: center;
+    font-size: var(--fs-sm);
+    font-weight: 400;
+    padding: 0.6rem;
+    border-bottom: 1px solid var(--primary-extremely-low-opacity);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--light-subtext-sharper);
+}
+
+.level-markers-dropdown .character-marker-cont {
+    padding: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.level-markers-dropdown .character-marker-cont:focus,
+.level-markers-dropdown .character-marker-cont:hover {
+    background-color: var(--primary-extremely-low-opacity);
+}
+
+.level-markers-dropdown .character-marker-cont:not(:last-child) {
+    border-bottom: 1px solid var(--primary-extremely-low-opacity);
+}
+
+.level-markers-dropdown .character-marker-cont .character-name,
+.level-markers-dropdown .character-marker-cont .marker-state {
+    font-size: var(--fs-sm);
+    text-transform: uppercase;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    max-width: 11ch;
+    word-wrap: break-word;
+    overflow: hidden;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+}
+
+.level-markers-dropdown .character-marker-cont .marker-state p {
+    border-radius: 2px;
+    padding: 0.15rem;
+}
+
+.level-markers-dropdown .character-marker-cont .marker-state .marker-not-placed {
+    color: var(--negative-color);
+    background-color: var(--negative-extremely-low-opacity);
+    border: 1px solid var(--negative-very-low-opacity);
+}
+
+.level-markers-dropdown .character-marker-cont .marker-state .currently-placing-marker {
+    color: var(--pending-color);
+    background-color: var(--pending-extremely-low-opacity);
+    border: 1px solid var(--pending-very-low-opacity);
+}
+
+.level-markers-dropdown .character-marker-cont .marker-state .marker-placed {
+    color: var(--primary-color);
+    background-color: var(--primary-extremely-low-opacity);
+    border: 1px solid var(--primary-very-low-opacity);
+}
+
+.level-markers-dropdown .character-marker-cont .marker-actions {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.level-markers-dropdown .character-marker-cont .marker-actions > button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    outline: none;
+
+    padding: 0.15rem;
+
+    cursor: pointer;
+    opacity: 0.65;
+}
+
+.level-markers-dropdown .character-marker-cont .marker-actions > button img {
+    width: 16px;
+    height: 16px;
+
+}
+
+.level-markers-dropdown .character-marker-cont .marker-actions > .character-hint:hover,
+.level-markers-dropdown .character-marker-cont .marker-actions > .character-hint:focus {
+    opacity: 1;
+    background-color: var(--pending-extremely-low-opacity);
+    border: 1px solid var(--pending-very-low-opacity);
+    border-radius: 2px;
+}
+
+.level-markers-dropdown .character-marker-cont .marker-actions > .remove-marker:hover,
+.level-markers-dropdown .character-marker-cont .marker-actions > .remove-marker:focus {
+    opacity: 1;
+    background-color: var(--negative-extremely-low-opacity);
+    border: 1px solid var(--negative-very-low-opacity);
+    border-radius: 2px;
+}
