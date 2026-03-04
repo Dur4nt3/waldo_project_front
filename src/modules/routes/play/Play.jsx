@@ -28,15 +28,11 @@ export default function Play() {
             description: 'Red haired girl with a pink shirt'
         },
     };
-
-    // TODO: Potentially add a useEffect that syncs the state with characterIds
-    // TODO: I.e., if the contents of characterIds change, re-initialize the state
+    const markerSize = 10;
 
     const [markers, setMarkers] = useState({
         ...initializeMarkerState(characters),
     });
-    // NOTE: THIS IS EITHER NULL OR A CHARACTER ID
-    // DO NOT PUT A BOOLEAN VALUE HERE
     const [placingMarker, setPlacingMarker] = useState(null);
 
     function addMarkerPosition(markerId, markerPosition) {
@@ -62,8 +58,10 @@ export default function Play() {
                     image={lvl1Image}
                     placingMarker={placingMarker}
                     setPlacingMarker={setPlacingMarker}
+                    characters={characters}
                     markers={markers}
                     addMarkerPosition={addMarkerPosition}
+                    markerSize={markerSize}
                 />
                 <SubmitLevelAnswers answerData={{ 1: 'test1', 2: 'test2' }} />
             </PlayMain>

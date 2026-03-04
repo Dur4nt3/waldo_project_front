@@ -10,8 +10,10 @@ export default function PlayAreaCont({
     image,
     placingMarker,
     setPlacingMarker,
+    characters,
     markers,
     addMarkerPosition,
+    markerSize,
 }) {
     const panzoomRef = useRef();
     const imageRef = useRef();
@@ -56,8 +58,12 @@ export default function PlayAreaCont({
                             style={{
                                 left: `${markers[markerId].pctX * 100}%`,
                                 top: `${markers[markerId].pctY * 100}%`,
+                                width: `${markerSize}px`,
+                                height: `${markerSize}px`,
                             }}
-                        ></div>
+                        >
+                            <span className="character-name">{characters[markerId].name}</span>
+                        </div>
                     );
                 })}
             </div>

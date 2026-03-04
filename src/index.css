@@ -76,6 +76,32 @@ body {
     align-items: center;
 }
 
+#root:has(.fullscreen-loader) {
+    display: grid;
+    place-items: center;
+}
+
+.fullscreen-loader {
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fullscreen-loader > h1 {
+    font-style: italic;
+    font-size: var(--fs-xl);
+    font-weight: 500;
+}
+
+.fullscreen-loader > h1 > span {
+    color: var(--primary-color);
+    text-shadow: var(--primary-text-shadow);
+}
+
 @keyframes fadeDown {
     from {
         opacity: 0;
