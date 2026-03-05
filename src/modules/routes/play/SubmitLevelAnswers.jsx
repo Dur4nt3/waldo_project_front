@@ -20,7 +20,7 @@ export default function SubmitLevelAnswers({ answerData = {} }) {
             ))}
 
             <button type='submit' className='has-loader'>
-                { fetcher.state === 'idle' ? 'Submit' : <FormLoader color='#e8f4f8' />}
+                { fetcher.state === 'idle' ? 'Check' : <FormLoader color='#e8f4f8' />}
             </button>
         </fetcher.Form>
     );

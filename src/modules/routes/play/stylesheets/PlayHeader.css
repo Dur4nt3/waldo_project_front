@@ -30,7 +30,17 @@
     color: var(--light-text);
 }
 
-.play-header .header-info h1 > span {
+.play-header .header-info h1 a {
+    color: var(--light-text);
+    text-decoration: none;
+    outline: 2px solid transparent;
+}
+
+.play-header .header-info h1 a:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+.play-header .header-info h1 span {
     color: var(--primary-color);
     text-shadow: var(--primary-text-shadow-minimal);
 }

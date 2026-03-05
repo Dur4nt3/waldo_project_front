@@ -37,6 +37,7 @@
     border-radius: 50%;
 
     transform: translate(-50%, -50%);
+    pointer-events: none;
 }
 
 .image-canvas .marker > .character-name {
@@ -47,6 +48,7 @@
     color: var(--dark-text);
     background-color: var(--primary-half-opacity);
     border-radius: 0.15rem;
+    pointer-events: none;
 }
 
 .canvas-options {
@@ -58,4 +60,6 @@
 .canvas-options > .reset-image-alignment-button {
     font-size: var(--fs-sm);
     padding: 0.35rem 0.5rem;
+
+    animation: fadeDown 0.7s 0.5s ease both;
 }

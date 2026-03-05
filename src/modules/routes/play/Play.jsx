@@ -10,6 +10,7 @@ import PlayMain from './PlayMain';
 import LevelMarkers from './LevelMarkers';
 import PlayAreaCont from './PlayAreaCont';
 import SubmitLevelAnswers from './SubmitLevelAnswers';
+import ResetGameButton from './ResetGameButton';
 
 import lvl1Image from '../../../assets/media/images/waldo-rick-morty-lvl1.webp';
 // import lvl2Image from '../../../assets/media/images/waldo-breaking-bad-lvl2.png';
@@ -64,6 +65,7 @@ export default function Play() {
                     markerSize={markerSize}
                 />
                 <SubmitLevelAnswers answerData={{ 1: 'test1', 2: 'test2' }} />
+                <ResetGameButton />
             </PlayMain>
         </>
     );

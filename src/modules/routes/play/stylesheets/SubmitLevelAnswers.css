@@ -1,5 +1,5 @@
 .submit-level-answers-form {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 
     display: flex;
     justify-content: center;
@@ -9,27 +9,16 @@
     font-size: var(--fs-base);
     font-weight: 700;
     letter-spacing: 0.18rem;
-    text-transform: uppercase;
-    color: var(--dark-text);
-
-    background: var(--primary-color);
-
-    border: none;
-    padding: 0.6rem 2.25rem;
-
-    cursor: pointer;
     
-    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+    padding: 0.6rem 3.25rem;
+
     transition: 0.2s;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.35);
-    white-space: nowrap;
+
+    animation: fadeDown 0.7s 0.7s ease both;
 }
 
-.submit-level-answers-form > button:hover {
-    box-shadow: 0 0 35px rgba(0, 212, 255, 0.6);
-    transform: translateY(-1px);
-}
-
-.submit-level-answers-form > button:active {
-    transform: scale(0.98);
+@media (min-width: 40rem) {
+    .submit-level-answers-form > button {
+        padding: 0.75rem 5rem;
+    }
 }

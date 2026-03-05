@@ -21,6 +21,8 @@ export default function PlayAreaCont({
 
     usePanzoom(image, imageRef, panzoomRef);
 
+    console.log(markers);
+
     return (
         <div className='play-area-cont'>
             <div className='image-canvas' ref={canvasRef}>

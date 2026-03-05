@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+
 import canFitPips from '../../utilities/ui/canFitPips';
 
 import './stylesheets/PlayHeader.css';
@@ -28,7 +30,7 @@ export default function PlayHeader({ levelCount, levelsCompleted }) {
         <header className='play-header'>
             <div className='header-info'>
                 <h1>
-                    FIND <span>THEM</span>
+                    <Link to='/'>FIND <span>THEM</span></Link>
                 </h1>
 
                 <div className='level-indicator'>

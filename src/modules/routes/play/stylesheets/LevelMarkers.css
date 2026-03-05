@@ -26,6 +26,7 @@
     clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
 
     transition: 0.2s;
+    animation: fadeUp 0.7s 0.3s ease both;
 }
 
 .open-markers-menu:has(img.menu-open),
@@ -217,6 +218,10 @@
 }
 
 @media (min-width: 40rem) {
+    .open-markers-menu {
+        padding: 0.4rem 2rem;
+    }
+
     .level-markers-dropdown {
         min-width: 25rem;
     }
@@ -240,8 +245,16 @@
     }
 }
 
-
 @media (min-width: 64rem) {
+    .open-markers-menu {
+        font-size: var(--fs-base);
+    }
+
+    .open-markers-menu > img {
+        width: 14px;
+        height: 14px;
+    }
+
     .level-markers-dropdown {
         min-width: 35rem;
     }

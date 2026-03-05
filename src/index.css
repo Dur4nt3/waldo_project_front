@@ -36,6 +36,7 @@
     --misc-interactable-color-lighter: #0d1825;
     --pending-color: #ffd700;
     --negative-color: #f71e43;
+    --positive-color: #00e34f;
 
     --primary-low-opacity: rgba(0, 212, 255, 0.7);
     --primary-half-opacity: rgba(0, 212, 255, 0.5);
@@ -125,7 +126,8 @@ body {
 }
 
 .canvas-options > .reset-image-alignment-button,
-.homepage-actions a.clear-button-design {
+.homepage-actions a.clear-button-design,
+.submit-level-answers-form > button {
     text-align: center;
     font-weight: 600;
     letter-spacing: 0.15rem;
@@ -135,6 +137,7 @@ body {
     background: transparent;
 
     border: 1px solid rgba(232, 244, 248, 0.35);
+    outline: none;
 
     cursor: pointer;
     clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
@@ -142,10 +145,46 @@ body {
 }
 
 .canvas-options > .reset-image-alignment-button:hover,
-.homepage-actions a.clear-button-design:hover {
+.canvas-options > .reset-image-alignment-button:focus,
+.homepage-actions a.clear-button-design:hover,
+.homepage-actions a.clear-button-design:focus,
+.submit-level-answers-form > button:hover,
+.submit-level-answers-form > button:focus {
     border-color: var(--primary-color);
     color: var(--primary-color);
     background: var(--primary-extremely-low-opacity);
+}
+
+.homepage-actions .leaderboard-link,
+.reset-game-button {
+    text-align: center;
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+    color: var(--light-subtext-sharper);
+
+    background: transparent;
+
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-bottom: 1px solid transparent;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    transition: 0.2s;
+
+    animation: fadeUp 0.7s 0.6s ease both;
+}
+
+.homepage-actions .leaderboard-link:hover,
+.homepage-actions .leaderboard-link:focus {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
 }
 
 /* ######################### General Styles ######################### */
