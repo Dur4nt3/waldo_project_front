@@ -1,0 +1,98 @@
+.faq-accordion {
+    width: 17.5rem;
+}
+
+.faq-accordion-item {
+    background-color: var(--misc-interactable-color);
+    border: 1px solid var(--primary-extremely-low-opacity);
+    border-left: 2px solid var(--primary-very-low-opacity);
+}
+
+.faq-accordion-item[data-active='true'] {
+    background-color: var(--misc-interactable-color);
+    border: 1px solid var(--primary-extremely-low-opacity);
+    border-left: 2px solid var(--primary-color);
+}
+
+.faq-accordion-chevron {
+    font-size: var(--fs-base);
+    font-style: normal;
+    color: var(--primary-half-opacity);
+
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid var(--primary-extremely-low-opacity);
+    border-radius: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
+}
+
+.faq-accordion-item[data-active='true'] .faq-accordion-chevron {
+    background-color: var(--primary-extremely-low-opacity);
+    color: var(--primary-color);
+    transform: rotate(45deg);
+}
+
+.faq-accordion-control {
+    color: var(--light-text);
+
+    transition: 0.2s;
+}
+
+.faq-accordion-control:focus {
+    outline-color: var(--primary-color);
+}
+
+.faq-accordion-control:hover {
+    background-color: var(--primary-extremely-low-opacity);
+}
+
+.faq-accordion-item[data-active='true'] .faq-accordion-control {
+    color: var(--primary-color);
+}
+
+.faq-accordion-panel {
+    padding: 0 1rem 0.35rem 1rem;
+
+    font-size: var(--fs-sm);
+    border-top: 1px solid transparent;
+}
+
+.faq-accordion-content {
+    padding: 0;
+    padding-top: 0.35rem;
+    border-top: 1px solid var(--primary-extremely-low-opacity);
+}
+
+@media (min-width: 40rem) {
+    .faq-accordion {
+        width: 35rem;
+    }
+
+    .faq-accordion-panel {
+        font-size: var(--fs-base);
+    }
+}
+
+@media (min-width: 48rem) {
+    .faq-accordion {
+        width: 40rem;
+    }
+}
+
+@media (min-width: 64rem) {
+    .faq-accordion {
+        width: 48rem;
+    }
+}
+
+@media (min-width: 80rem) {
+    .faq-accordion {
+        width: 64rem;
+    }
+}

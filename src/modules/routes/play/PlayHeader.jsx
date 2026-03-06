@@ -22,9 +22,6 @@ function createLevelPips(levelCount, levelsCompleted) {
     return levelPips;
 }
 
-// TODO: Get levelCount, levelsCompleted as inputs
-// TODO: Make indicators dynamic via above inputs
-// TODO: Make reset button functional
 export default function PlayHeader({ levelCount, levelsCompleted }) {
     return (
         <header className='play-header'>

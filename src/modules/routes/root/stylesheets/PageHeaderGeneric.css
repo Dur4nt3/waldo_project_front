@@ -1,0 +1,61 @@
+.page-header-generic {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    padding: 0.35rem;
+
+    background-color: var(--background-color);
+
+    border-bottom: 1px solid var(--primary-separator-border);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.page-header-generic .header-info {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.page-header-generic .header-info h1 {
+    font-size: var(--fs-base);
+    white-space: nowrap;
+    font-weight: 700;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    color: var(--light-text);
+}
+
+.page-header-generic .header-info h1 a {
+    color: var(--light-text);
+    text-decoration: none;
+    outline: 2px solid transparent;
+}
+
+.page-header-generic .header-info h1 a:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+.page-header-generic .header-info h1 span {
+    color: var(--primary-color);
+    text-shadow: var(--primary-text-shadow-minimal);
+}
+
+@media (min-width: 40rem) {
+    .page-header-generic {
+        padding: 0.5rem;
+    }
+
+    .page-header-generic .header-info {
+        justify-content: start;
+        gap: 1.5rem;
+    }
+
+    .page-header-generic .header-info h1 {
+        font-size: var(--fs-md);
+    }
+}
