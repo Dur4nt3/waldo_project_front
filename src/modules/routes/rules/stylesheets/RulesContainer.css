@@ -1,0 +1,11 @@
+.rules-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+@media (min-width: 40rem) {
+    .rules-container {
+        gap: 1.25rem;
+    }
+}

@@ -84,38 +84,6 @@
     background-color: var(--primary-half-opacity);
 }
 
-.play-header .header-action {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.play-header .header-action button {
-    font-size: var(--fs-sm);
-    font-weight: 600;
-    letter-spacing: 0.15rem;
-    text-transform: uppercase;
-    color: var(--light-text);
-
-    background: transparent;
-    clip-path: polygon(5px 0%, 100% 0%, calc(100% - 5px) 100%, 0% 100%);
-
-    border: 1px solid rgba(232,244,248,0.1);
-    padding: 0.3rem 0.9rem;
-    
-    cursor: pointer;
-    
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    transition: 0.2s;
-}
-
-.play-header .header-action button:hover {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
 @media (min-width: 40rem) {
     .play-header {
         padding: 0.5rem;

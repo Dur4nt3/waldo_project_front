@@ -1,0 +1,24 @@
+.rule-card {
+    background: var(--misc-interactable-color);
+    border: 1px solid var(--primary-extremely-low-opacity);
+    border-left: 2px solid var(--primary-color);
+    padding: 1rem;
+}
+
+.rule-card .rule-summary {
+    font-size: var(--fs-base);
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.rule-card .rule-description {
+    font-size: var(--fs-sm);
+    font-weight: 400;
+    letter-spacing: 0.03rem;
+    color: var(--light-subtext-sharper);
+    line-height: 1.55;
+    margin-top: 0.5rem;
+}
