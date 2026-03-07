@@ -15,10 +15,12 @@
 }
 
 .rule-card .rule-description {
+    max-width: 45ch;
+
     font-size: var(--fs-sm);
     font-weight: 400;
     letter-spacing: 0.03rem;
-    color: var(--light-subtext-sharper);
+    color: var(--light-text);
     line-height: 1.55;
     margin-top: 0.5rem;
 }

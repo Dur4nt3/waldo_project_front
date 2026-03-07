@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router';
 import Root from './modules/routes/root/Root';
 import Play from './modules/routes/play/Play';
 import Rules from './modules/routes/rules/Rules';
+import FAQ from './modules/routes/faq/FAQ';
 
 import rootLoader from './modules/utilities/loaders/rootLoader';
 
@@ -27,7 +28,13 @@ const router = createBrowserRouter([
         element: <Rules />,
         errorElement: <h1>WIP</h1>,
         hydrateFallbackElement: <FullscreenLoader />,
-    }
+    },
+    {
+        path: '/faq',
+        element: <FAQ />,
+        errorElement: <h1>WIP</h1>,
+        hydrateFallbackElement: <FullscreenLoader />,
+    },
 ]);
 
 export default router;

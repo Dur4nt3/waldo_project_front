@@ -1,12 +1,18 @@
 import Rule from './classes/Rule';
 
 const rules = [
-    new Rule('Summary 1', 'Description 1'),
-    new Rule('Summary 2', 'Description 2'),
-    new Rule('Summary 3', 'Description 3'),
-    new Rule('Summary 4', 'Description 4'),
-    new Rule('Summary 5', 'Description 5'),
-    new Rule('Summary 6', 'Description 6'),
+    new Rule(
+        'Find all hidden characters',
+        'Each level contains a set number of hidden characters. You must place a marker on every character to complete the level'
+    ),
+    new Rule(
+        'Place your markers carefully',
+        'Markers must be placed within a set radius of the character to count as correct.'
+    ),
+    new Rule(
+        'Time is tracked',
+        'Your completion time is recorded from the moment the level loads. Faster times rank higher on the leaderboard.'
+    ),
 ];
 
 export default rules;
