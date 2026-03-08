@@ -21,8 +21,6 @@ export default function PlayAreaCont({
 
     usePanzoom(image, imageRef, panzoomRef);
 
-    console.log(markers);
-
     return (
         <div className='play-area-cont'>
             <div className='image-canvas' ref={canvasRef}>
@@ -72,7 +70,7 @@ export default function PlayAreaCont({
 
             <div className='canvas-options'>
                 <button
-                    className='reset-image-alignment-button'
+                    className='reset-image-alignment-button clear-button-design'
                     onClick={() => {
                         if (!panzoomRef.current) {
                             return;
