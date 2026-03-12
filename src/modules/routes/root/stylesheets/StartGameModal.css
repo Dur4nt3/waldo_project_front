@@ -1,0 +1,130 @@
+.start-game-modal-content {
+    background-color: var(--background-color);
+
+    border: 1px solid var(--primary-very-low-opacity);
+    border-radius: 0;
+    padding: 0.5rem 1rem;
+
+    clip-path: polygon(14px 0%, 100% 0%, calc(100% - 14px) 100%, 0% 100%);
+
+    box-shadow: var(--primary-box-shadow);
+
+    color: var(--light-text);
+}
+
+.start-game-modal-header {
+    background-color: var(--background-color);
+    padding: 0;
+    min-height: max-content;
+}
+
+.start-game-modal-close-button {
+    outline: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.start-game-modal-close-button:hover,
+.start-game-modal-close-button:focus {
+    outline: none;
+    color: var(--negative-color);
+    border-color: var(--negative-very-low-opacity);
+    background: var(--negative-extremely-low-opacity);
+}
+
+.start-game-heading {
+    margin-bottom: 1.25rem;
+}
+
+.start-game-heading .heading-top {
+    font-size: var(--fs-sm);
+    font-weight: 200;
+    letter-spacing: 0.28rem;
+    text-transform: uppercase;
+    color: var(--primary-low-opacity);
+}
+
+.start-game-heading .heading-text {
+    font-size: var(--fs-md);
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--light-text);
+    line-height: 1.1;
+}
+
+.start-game-heading .heading-text span {
+    color: var(--primary-color);
+}
+
+.start-game-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.start-game-form .start-game-form-label {
+    font-size: var(--fs-sm);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--light-subtext-sharper);
+    margin-bottom: 0.15rem;
+}
+
+.start-game-form input {
+    font-size: var(--fs-base);
+    font-weight: 500;
+    letter-spacing: 0.06rem;
+    color: var(--light-text);
+    background: transparent;
+
+    border: none;
+    border-bottom: 1px solid var(--primary-half-opacity);
+    padding: 0.25rem;
+    
+    outline: none;
+    
+    transition: 0.2s;
+}
+
+.start-game-form input:focus {
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.start-game-form .inline-error {
+    font-size: var(--fs-sm);
+    letter-spacing: 0.05rem;
+    color: var(--negative-color);
+}
+
+.start-game-form .inline-error.not-empty {
+    margin-top: 0.5rem;
+}
+
+.start-game-form .start-game-button {
+    padding: 0.25rem 0;
+    margin-top: 1.5rem;
+}
+
+/*
+<div class="modal error" style="position:relative;">
+    <button class="btn-close">✕</button>
+
+    <div class="modal-header">
+        <div class="modal-eyebrow">New Session</div>
+        <div class="modal-title">Who's <span>Playing?</span></div>
+    </div>
+
+    <div class="input-wrap">
+        <div class="input-top">
+            <label class="input-label" for="nameError">Your Name</label>
+            <span class="input-error-msg visible">Name can't be empty</span>
+        </div>
+
+        <input class="input-field error" id="nameError" type="text" placeholder="Enter your name..." autocomplete="off"/>
+    </div>
+
+    <button class="btn-confirm">Let's Go</button>
+
+    <span class="state-label">Error</span>
+</div>
+*/

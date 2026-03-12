@@ -48,6 +48,7 @@
     --pending-very-low-opacity: rgba(255, 215, 0, 0.2);
     --pending-extremely-low-opacity: rgba(255, 215, 0, 0.07);
 
+    --negative-low-opacity: rgba(247, 30, 67, 0.7);
     --negative-very-low-opacity: rgba(247, 30, 67, 0.2);
     --negative-extremely-low-opacity: rgba(247, 30, 67, 0.07);
 
@@ -58,6 +59,10 @@
         0 0 100px rgba(0, 212, 255, 0.2);
 
     --primary-text-shadow-minimal: 0 0 12px rgba(0, 212, 255, 0.7);
+
+    --primary-box-shadow:
+        0 0 0 1px rgba(0, 212, 255, 0.05), 0 0 60px rgba(0, 212, 255, 0.1),
+        0 24px 60px rgba(0, 0, 0, 0.6);
 }
 
 body {
@@ -125,9 +130,8 @@ body {
     }
 }
 
-.canvas-options > .reset-image-alignment-button,
-.homepage-actions a.clear-button-design,
-.submit-level-answers-form > button {
+button.clear-button-design,
+a.clear-button-design {
     text-align: center;
     font-weight: 600;
     letter-spacing: 0.15rem;
@@ -144,12 +148,10 @@ body {
     transition: 0.2s;
 }
 
-.canvas-options > .reset-image-alignment-button:hover,
-.canvas-options > .reset-image-alignment-button:focus,
-.homepage-actions a.clear-button-design:hover,
-.homepage-actions a.clear-button-design:focus,
-.submit-level-answers-form > button:hover,
-.submit-level-answers-form > button:focus {
+button.clear-button-design:hover,
+button.clear-button-design:focus,
+a.clear-button-design:hover,
+a.clear-button-design:focus {
     border-color: var(--primary-color);
     color: var(--primary-color);
     background: var(--primary-extremely-low-opacity);

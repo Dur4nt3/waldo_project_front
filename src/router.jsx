@@ -5,7 +5,7 @@ import Play from './modules/routes/play/Play';
 import Rules from './modules/routes/rules/Rules';
 import FAQ from './modules/routes/faq/FAQ';
 
-import rootLoader from './modules/utilities/loaders/rootLoader';
+import rootAction from './modules/utilities/actions/rootAction';
 
 import FullscreenLoader from './modules/utilities/miscComponents/FullscreenLoader';
 
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
         element: <Root />,
         errorElement: <h1>WIP</h1>,
         hydrateFallbackElement: <FullscreenLoader />,
-        loader: rootLoader,
+        action: rootAction,
     },
     {
         path: '/play',

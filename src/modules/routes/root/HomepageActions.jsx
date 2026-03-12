@@ -2,12 +2,15 @@ import { Link } from 'react-router';
 
 import './stylesheets/HomepageActions.css';
 
-export default function HomepageActions() {
+export default function HomepageActions({ openModal }) {
     return (
         <div className='homepage-actions'>
-            <Link className='play-game clear-button-design' to='/play'>
+            <button
+                className='play-game clear-button-design'
+                onClick={openModal}
+            >
                 Play
-            </Link>
+            </button>
 
             <div className='about-actions'>
                 <Link className='site-rules clear-button-design' to='/rules'>
