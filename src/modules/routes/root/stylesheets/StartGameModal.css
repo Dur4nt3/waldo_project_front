@@ -86,8 +86,16 @@
     transition: 0.2s;
 }
 
+.start-game-form input.has-errors {
+    border-bottom: 1px solid var(--negative-half-opacity);
+}
+
 .start-game-form input:focus {
     border-bottom: 1px solid var(--primary-color);
+}
+
+.start-game-form input.has-errors:focus {
+    border-bottom: 1px solid var(--negative-color);
 }
 
 .start-game-form .inline-error {
@@ -103,28 +111,7 @@
 .start-game-form .start-game-button {
     padding: 0.25rem 0;
     margin-top: 1.5rem;
+
+    display: grid;
+    place-items: center;
 }
-
-/*
-<div class="modal error" style="position:relative;">
-    <button class="btn-close">✕</button>
-
-    <div class="modal-header">
-        <div class="modal-eyebrow">New Session</div>
-        <div class="modal-title">Who's <span>Playing?</span></div>
-    </div>
-
-    <div class="input-wrap">
-        <div class="input-top">
-            <label class="input-label" for="nameError">Your Name</label>
-            <span class="input-error-msg visible">Name can't be empty</span>
-        </div>
-
-        <input class="input-field error" id="nameError" type="text" placeholder="Enter your name..." autocomplete="off"/>
-    </div>
-
-    <button class="btn-confirm">Let's Go</button>
-
-    <span class="state-label">Error</span>
-</div>
-*/

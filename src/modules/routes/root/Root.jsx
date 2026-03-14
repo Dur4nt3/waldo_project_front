@@ -11,14 +11,11 @@ import HomepageActions from './HomepageActions';
 export default function Root() {
     const [opened, { open, close }] = useDisclosure(false);
 
-    const submissionErrors = null
-
     return (
         <>
             <StartGameModal
                 opened={opened}
                 close={close}
-                nameErrors={submissionErrors?.nameErrors}
             />
             <BackgroundDecor />
             <BackgroundCornerBrackets />
