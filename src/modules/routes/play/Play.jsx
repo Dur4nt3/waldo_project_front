@@ -13,20 +13,17 @@ import SubmitLevelAnswers from './SubmitLevelAnswers';
 import ResetGameButton from './ResetGameButton';
 
 import lvl1Image from '../../../assets/media/images/waldo-rick-morty-lvl1.webp';
-// import lvl2Image from '../../../assets/media/images/waldo-breaking-bad-lvl2.png';
-// import lvl3Image from '../../../assets/media/images/waldo-one-piece-lvl3.png';
 
 export default function Play() {
     // Mock data determined from loader response
     const characters = {
         1: {
             name: 'Pencilvester',
-            // eslint-disable-next-line quotes
             description: "He's a pencil...",
         },
         2: {
             name: 'Summer',
-            description: 'Red haired girl with a pink shirt'
+            description: 'Red haired girl with a pink shirt',
         },
     };
     const markerSize = 10;

@@ -31,11 +31,15 @@ export default async function rootAction({ request }) {
     }).catch(() => 502);
 
     if (response === 502) {
-        return { errors: 'Server unavailable, try again later.' }
+        return {
+            errors: "We've encountered a temporary error, try again later.",
+        };
     }
 
     if (response.status === 404) {
-        return { errors: 'There\'s seems to be an error on our end. Try again later.'}
+        return {
+            errors: "We've encountered a temporary error, try again later.",
+        };
     }
 
     const results = await response.json();

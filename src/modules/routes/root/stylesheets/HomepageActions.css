@@ -18,6 +18,12 @@
     margin-bottom: 1.5rem;
 
     animation: fadeUp 0.7s 0.3s ease both;
+
+    width: 100%;
+    height: calc(1lh + 1rem * 2);
+
+    display: grid;
+    place-items: center;
 }
 
 .about-actions {

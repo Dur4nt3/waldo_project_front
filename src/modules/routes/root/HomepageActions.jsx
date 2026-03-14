@@ -1,15 +1,21 @@
-import { Link } from 'react-router';
+import { useEffect } from 'react';
+import { Link, useFetcher } from 'react-router';
+
+import FormLoader from '../../utilities/miscComponents/FormLoader';
 
 import './stylesheets/HomepageActions.css';
 
 export default function HomepageActions({ openModal }) {
+    const fetcher = useFetcher();
+
     return (
         <div className='homepage-actions'>
-            <button
-                className='play-game clear-button-design'
-                onClick={openModal}
-            >
-                Play
+            <button className='play-game clear-button-design' onClick={() => fetcher.load('/start-game')}>
+                {fetcher.state === 'idle' ? (
+                    'Play'
+                ) : (
+                    <FormLoader color='#00d4ff' />
+                )}
             </button>
 
             <div className='about-actions'>

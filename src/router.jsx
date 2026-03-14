@@ -6,6 +6,7 @@ import Rules from './modules/routes/rules/Rules';
 import FAQ from './modules/routes/faq/FAQ';
 
 import playLoader from './modules/utilities/loaders/playLoader';
+import startGameLoader from './modules/utilities/loaders/startGameLoader';
 
 import rootAction from './modules/utilities/actions/rootAction';
 
@@ -37,6 +38,13 @@ const router = createBrowserRouter([
         element: <FAQ />,
         errorElement: <h1>WIP ERROR ELEMENT</h1>,
         hydrateFallbackElement: <FullscreenLoader />,
+    },
+    {
+        path: '/start-game',
+        element: <h1>WIP ERROR ELEMENT</h1>,
+        errorElement: <h1>WIP ERROR ELEMENT</h1>,
+        hydrateFallbackElement: <FullscreenLoader />,
+        loader: startGameLoader,
     },
 ]);
 
