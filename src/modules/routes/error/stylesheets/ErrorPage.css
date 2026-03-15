@@ -1,13 +1,81 @@
 .error-cont {
     padding: 1rem;
     z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+
     text-align: center;
+
+    animation: fadeIn 0.4s ease both;
+}
+
+.error-cont .error-code {
+    font-size: var(--huge-heading);
+    font-weight: 700;
+    letter-spacing: 0.04rem;
+    line-height: 1;
+    color: var(--negative-color);
+    text-shadow: var(--negative-text-shadow);
+
+    margin-bottom: 1rem;
+
+    position: relative;
+}
+
+.error-cont .error-code::before {
+    content: '';
+
+    position: absolute;
+    bottom: -0.15rem;
+
+    width: 30%;
+    height: 3px;
+    background: var(--negative-color);
+    box-shadow: 0 0 8px var(--negative-half-opacity);
+}
+
+.error-cont .error-title {
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    letter-spacing: 0.06rem;
+    text-transform: uppercase;
+    color: var(--light-text);
+    line-height: 1.1;
+    margin-bottom: 0.65rem;
+}
+
+.error-cont .error-description-cont {
+    font-size: var(--fs-base);
+    font-weight: 400;
+    color: var(--light-subtext-sharper);
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
 }
 
 .error-cont .return-home-link {
-    text-decoration: none;
-    color: var(--light-subtext);
+    align-self: flex-start;
+
     display: flex;
     align-items: center;
     gap: 0.25rem;
+
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+    color: var(--light-subtext);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+
+    transition:
+        color 0.2s,
+        border-color 0.2s;
+}
+
+.error-cont .return-home-link:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
 }

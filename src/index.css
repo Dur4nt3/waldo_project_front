@@ -58,6 +58,9 @@
     --primary-text-shadow:
         0 0 20px rgba(0, 212, 255, 0.8), 0 0 60px rgba(0, 212, 255, 0.4),
         0 0 100px rgba(0, 212, 255, 0.2);
+    --negative-text-shadow:
+        0 0 20px rgba(247, 30, 67, 0.8), 0 0 60px rgba(247, 30, 67, 0.4),
+        0 0 100px rgba(247, 30, 67, 0.2);
 
     --primary-text-shadow-minimal: 0 0 12px rgba(0, 212, 255, 0.7);
 
@@ -125,6 +128,17 @@ body {
     from {
         opacity: 0;
         transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
