@@ -83,7 +83,8 @@ body {
     align-items: center;
 }
 
-#root:has(.fullscreen-loader) {
+#root:has(.fullscreen-loader),
+#root:has(.error-cont) {
     display: grid;
     place-items: center;
 }

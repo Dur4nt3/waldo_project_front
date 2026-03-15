@@ -8,9 +8,18 @@ import './stylesheets/HomepageActions.css';
 export default function HomepageActions({ openModal }) {
     const fetcher = useFetcher();
 
+    useEffect(() => {
+        if (fetcher.data?.openModal === true) {
+            openModal();
+        }
+    }, [fetcher.data, openModal]);
+
     return (
         <div className='homepage-actions'>
-            <button className='play-game clear-button-design' onClick={() => fetcher.load('/start-game')}>
+            <button
+                className='play-game clear-button-design'
+                onClick={() => fetcher.load('/start-game')}
+            >
                 {fetcher.state === 'idle' ? (
                     'Play'
                 ) : (

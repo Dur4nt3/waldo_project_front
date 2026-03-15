@@ -2,6 +2,10 @@ import FAQ from './classes/FAQ';
 
 const FAQs = [
     new FAQ(
+        'How do I play?',
+        'Simply pan and zoom the image until you find a specific character (outlined by the marker menu), once you have found the character, click its respective marker and click on the character. Submit your answer when ready.'
+    ),
+    new FAQ(
         'Can I resize the image?',
         'You can pan and zoom the image as you see fit by dragging/scrolling (mobile is supported).'
     ),
@@ -35,7 +39,7 @@ const FAQs = [
     ),
     new FAQ(
         'How does the score work?',
-        'The score is simply the total time it took you to finish all levels (in milliseconds).'
+        'The score is simply the total time it took you to finish all levels (in seconds).'
     ),
     new FAQ(
         'What is that number in parentheses near my score?',

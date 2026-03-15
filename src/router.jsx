@@ -12,37 +12,39 @@ import rootAction from './modules/utilities/actions/rootAction';
 
 import FullscreenLoader from './modules/utilities/miscComponents/FullscreenLoader';
 
+import ErrorPage from './modules/routes/error/ErrorPage';
+
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root />,
-        errorElement: <h1>WIP ERROR ELEMENT</h1>,
+        errorElement: <ErrorPage />,
         hydrateFallbackElement: <FullscreenLoader />,
         action: rootAction,
     },
     {
         path: '/play',
         element: <Play />,
-        errorElement: <h1>WIP ERROR ELEMENT</h1>,
+        errorElement: <ErrorPage />,
         hydrateFallbackElement: <FullscreenLoader />,
         loader: playLoader,
     },
     {
         path: '/rules',
         element: <Rules />,
-        errorElement: <h1>WIP ERROR ELEMENT</h1>,
+        errorElement: <ErrorPage />,
         hydrateFallbackElement: <FullscreenLoader />,
     },
     {
         path: '/faq',
         element: <FAQ />,
-        errorElement: <h1>WIP ERROR ELEMENT</h1>,
+        errorElement: <ErrorPage />,
         hydrateFallbackElement: <FullscreenLoader />,
     },
     {
         path: '/start-game',
-        element: <h1>WIP ERROR ELEMENT</h1>,
-        errorElement: <h1>WIP ERROR ELEMENT</h1>,
+        element: <ErrorPage />,
+        errorElement: <ErrorPage />,
         hydrateFallbackElement: <FullscreenLoader />,
         loader: startGameLoader,
     },

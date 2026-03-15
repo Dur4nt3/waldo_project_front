@@ -1,0 +1,13 @@
+.error-cont {
+    padding: 1rem;
+    z-index: 2;
+    text-align: center;
+}
+
+.error-cont .return-home-link {
+    text-decoration: none;
+    color: var(--light-subtext);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
