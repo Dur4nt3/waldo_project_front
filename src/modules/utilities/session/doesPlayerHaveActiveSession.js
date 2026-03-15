@@ -28,5 +28,8 @@ export default async function doesPlayerHaveActiveSession() {
 
     const results = await response.json();
 
-    return { ok: true, data: results.success };
+    return {
+        ok: true,
+        data: results.success,
+    };
 }

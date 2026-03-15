@@ -1,15 +1,20 @@
-.submit-level-answers-form {
+.submit-level-answers-form,
+.start-next-level-form,
+.finish-game-form {
     margin-top: 1.5rem;
 
     display: flex;
     justify-content: center;
 }
 
-.submit-level-answers-form > button {
+.submit-level-answers-form > button,
+.start-next-level-form > button,
+.finish-game-form > button,
+.finish-game-form > button {
     font-size: var(--fs-base);
     font-weight: 700;
     letter-spacing: 0.18rem;
-    
+
     padding: 0.6rem 3.25rem;
 
     transition: 0.2s;
@@ -18,7 +23,10 @@
 }
 
 @media (min-width: 40rem) {
-    .submit-level-answers-form > button {
+    .submit-level-answers-form > button,
+    .start-next-level-form > button,
+    .finish-game-form > button,
+    .finish-game-form > button {
         padding: 0.75rem 5rem;
     }
 }

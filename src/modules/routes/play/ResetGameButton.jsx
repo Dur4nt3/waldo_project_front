@@ -18,13 +18,21 @@ export default function ResetGameButton() {
             }}
         >
             <Popover.Target>
-                <button className="reset-game-button">Reset Game</button>
+                <button className='reset-game-button'>Reset Game</button>
             </Popover.Target>
 
             <Popover.Dropdown>
-                <p className="reset-game-notice">This action is irreversible!</p>
-                <fetcher.Form action='/reset' method='DELETE'>
-                    <button type='submit' className='confirm-game-reset'>{fetcher.state === 'idle' ? 'Confirm' : <FormLoader />}</button>
+                <p className='reset-game-notice'>
+                    This action is irreversible!
+                </p>
+                <fetcher.Form action='/reset-game' method='DELETE'>
+                    <button
+                        type='submit'
+                        className='confirm-game-reset'
+                        disabled={fetcher.state !== 'idle'}
+                    >
+                        {fetcher.state === 'idle' ? 'Confirm' : <FormLoader color="#0a0e14" />}
+                    </button>
                 </fetcher.Form>
             </Popover.Dropdown>
         </Popover>

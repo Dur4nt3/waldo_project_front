@@ -59,7 +59,6 @@ export default function LevelMarkersDropdownActions({
             >
                 <img
                     src={deleteSvg}
-                    // eslint-disable-next-line @stylistic/max-len
                     alt={`remove ${characters[markerId].name}'s marking from the image`}
                 />
             </button>

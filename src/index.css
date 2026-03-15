@@ -53,6 +53,11 @@
     --negative-very-low-opacity: rgba(247, 30, 67, 0.2);
     --negative-extremely-low-opacity: rgba(247, 30, 67, 0.07);
 
+    --positive-low-opacity: rgba(0, 227, 79, 0.7);
+    --positive-half-opacity: rgba(0, 227, 79, 0.5);
+    --positive-very-low-opacity: rgba(0, 227, 79, 0.2);
+    --positive-extremely-low-opacity: rgba(0, 227, 79, 0.07);
+
     --primary-separator-border: rgba(0, 212, 255, 0.15);
 
     --primary-text-shadow:
@@ -164,10 +169,10 @@ a.clear-button-design {
     transition: 0.2s;
 }
 
-button.clear-button-design:hover,
-button.clear-button-design:focus,
-a.clear-button-design:hover,
-a.clear-button-design:focus {
+button.clear-button-design:not(:disabled):hover,
+button.clear-button-design:not(:disabled):focus,
+a.clear-button-design:not(:disabled):hover,
+a.clear-button-design:not(:disabled):focus {
     border-color: var(--primary-color);
     color: var(--primary-color);
     background: var(--primary-extremely-low-opacity);

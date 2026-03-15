@@ -17,6 +17,7 @@ export default function HomepageActions({ openModal }) {
     return (
         <div className='homepage-actions'>
             <button
+                disabled={fetcher.state !== 'idle'}
                 className='play-game clear-button-design'
                 onClick={() => fetcher.load('/start-game')}
             >

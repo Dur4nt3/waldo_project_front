@@ -58,11 +58,11 @@ export default function PlayAreaCont({
                             style={{
                                 left: `${markers[markerId].pctX * 100}%`,
                                 top: `${markers[markerId].pctY * 100}%`,
-                                width: `${markerSize}px`,
-                                height: `${markerSize}px`,
+                                width: `${markerSize.width}px`,
+                                height: `${markerSize.height}px`,
                             }}
                         >
-                            <span className="character-name">{characters[markerId].name}</span>
+                            <span className="character-name">{characters[markerId]?.name}</span>
                         </div>
                     );
                 })}

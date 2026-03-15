@@ -32,8 +32,8 @@ export default async function rootAction({ request }) {
         throw new Response(null, { status: 502 });
     });
 
-    if (response.status === 404) {
-        throw new Response(null, { status: 404 });
+    if (response.status !== 200) {
+        throw new Response(null, { status: response.status });
     }
 
     const results = await response.json();

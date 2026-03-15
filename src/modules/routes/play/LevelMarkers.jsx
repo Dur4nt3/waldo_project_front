@@ -17,6 +17,7 @@ export default function LevelMarkers({
     placingMarker,
     setPlacingMarker,
 }) {
+
     const [opened, setOpened] = useState(false);
 
     return (
@@ -48,7 +49,7 @@ export default function LevelMarkers({
 
                 {Object.keys(markers).map((markerId) => (
                     <LevelMarkerDropdownCont
-                        characterName={characters[markerId].name}
+                        characterName={characters[markerId]?.name}
                         markerId={markerId}
                         placingMarker={placingMarker}
                         setPlacingMarker={setPlacingMarker}

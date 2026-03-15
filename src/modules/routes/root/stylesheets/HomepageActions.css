@@ -26,6 +26,12 @@
     place-items: center;
 }
 
+div.homepage-actions button.play-game:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+    animation: none;
+}
+
 .about-actions {
     display: grid;
     grid-template-columns: 1fr 1fr;

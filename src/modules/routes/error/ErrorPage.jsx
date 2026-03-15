@@ -7,6 +7,17 @@ import { ArrowLeft } from 'lucide-react';
 import './stylesheets/ErrorPage.css';
 
 const errorContent = {
+    401: {
+        title: <h2 className='error-title'>Unauthorized</h2>,
+        description: (
+            <div className='error-description-cont'>
+                <p>
+                    It seems your session has ended or is invalid. Return home
+                    and start a new game.
+                </p>
+            </div>
+        ),
+    },
     404: {
         title: <h2 className='error-title'>Page Not Found</h2>,
         description: (
@@ -44,7 +55,11 @@ const errorContent = {
 export default function ErrorPage() {
     const error = useRouteError();
 
-    const status = error?.status || 404;
+    let status = error?.status || 404;
+
+    if (errorContent[status] === undefined) {
+        status = 404;
+    }
 
     return (
         <>

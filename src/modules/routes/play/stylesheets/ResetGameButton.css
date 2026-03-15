@@ -26,25 +26,36 @@
     clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
 }
 
+.reset-game-dropdown > form {
+    width: 100%;
+}
+
 .reset-game-dropdown .reset-game-notice {
     font-size: var(--fs-base);
 }
 
-.reset-game-dropdown .confirm-game-reset {
-    margin-top: 0.75rem;
 
+.reset-game-dropdown .confirm-game-reset {
+    
     font-size: var(--fs-base);
     font-weight: 700;
     letter-spacing: 0.18rem;
     text-transform: uppercase;
     white-space: nowrap;
     color: var(--dark-text);
-
+    
     background: var(--negative-color);
-
+    
+    margin-top: 0.75rem;
     border: none;
     border-radius: 0.25rem;
     padding: 0.1rem 0.4rem;
+
+    display: grid;
+    place-items: center;
+
+    height: calc(1lh + 0.1rem * 2);
+    width: 100%;
     
     cursor: pointer;
 

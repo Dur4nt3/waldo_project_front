@@ -12,8 +12,10 @@ function createLevelPips(levelCount, levelsCompleted) {
 
         if (levelsCompleted >= i) {
             pip = <div className='pip done' key={`level-${i}`}></div>;
-        } else {
+        } else if (levelsCompleted + 1 === i) {
             pip = <div className='pip active' key={`level-${i}`}></div>;
+        } else {
+            pip = <div className='pip' key={`level-${i}`}></div>;
         }
 
         levelPips.push(pip);
@@ -22,27 +24,35 @@ function createLevelPips(levelCount, levelsCompleted) {
     return levelPips;
 }
 
-export default function PlayHeader({ levelCount, levelsCompleted }) {
+export default function PlayHeader({
+    levelCount,
+    levelsCompleted,
+    omitPips = false,
+}) {
     return (
         <header className='play-header'>
             <div className='header-info'>
                 <h1>
-                    <Link to='/'>FIND <span>THEM</span></Link>
+                    <Link to='/'>
+                        FIND <span>THEM</span>
+                    </Link>
                 </h1>
 
-                <div className='level-indicator'>
-                    <p className='level-label'>Level</p>
+                {!omitPips && (
+                    <div className='level-indicator'>
+                        <p className='level-label'>Level</p>
 
-                    {canFitPips(levelCount) && (
-                        <div className='level-pips'>
-                            {createLevelPips(levelCount, levelsCompleted)}
-                        </div>
-                    )}
+                        {canFitPips(levelCount) && (
+                            <div className='level-pips'>
+                                {createLevelPips(levelCount, levelsCompleted)}
+                            </div>
+                        )}
 
-                    <p className='level-label levels-completed'>
-                        {levelsCompleted + 1}/{levelCount}
-                    </p>
-                </div>
+                        <p className='level-label levels-completed'>
+                            {levelsCompleted + 1}/{levelCount}
+                        </p>
+                    </div>
+                )}
             </div>
         </header>
     );

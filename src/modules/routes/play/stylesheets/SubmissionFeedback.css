@@ -1,0 +1,51 @@
+.submission-feedback-cont,
+.game-finished-cont {
+    margin-top: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    padding: 0.75rem 1rem;
+
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+}
+
+.submission-feedback-cont.has-error {
+    background: var(--negative-extremely-low-opacity);
+    border: 1px solid var(--negative-very-low-opacity);
+}
+
+.submission-feedback-cont.is-valid,
+.game-finished-cont {
+    background: var(--positive-extremely-low-opacity);
+    border: 1px solid var(--positive-very-low-opacity);
+
+    animation: fadeIn 0.5s 0.4s ease both;
+}
+
+.submission-feedback-cont .feedback-title,
+.game-finished-cont .finished-title {
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.submission-feedback-cont.has-error .feedback-title {
+    color: var(--negative-color);
+}
+
+.submission-feedback-cont.is-valid .feedback-title,
+.game-finished-cont .finished-title {
+    color: var(--positive-color);
+}
+
+.submission-feedback-cont .feedback-info,
+.game-finished-cont .finished-info {
+    font-size: var(--fs-sm);
+    font-weight: 400;
+    color: var(--light-text);
+    line-height: 1.5;
+}

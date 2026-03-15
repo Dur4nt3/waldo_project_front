@@ -9,6 +9,10 @@ import playLoader from './modules/utilities/loaders/playLoader';
 import startGameLoader from './modules/utilities/loaders/startGameLoader';
 
 import rootAction from './modules/utilities/actions/rootAction';
+import playAction from './modules/utilities/actions/playAction';
+import nextLevelAction from './modules/utilities/actions/nextLevelAction';
+import resetGameAction from './modules/utilities/actions/resetGameAction';
+import finishGameAction from './modules/utilities/actions/finishGameAction';
 
 import FullscreenLoader from './modules/utilities/miscComponents/FullscreenLoader';
 
@@ -28,6 +32,7 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         hydrateFallbackElement: <FullscreenLoader />,
         loader: playLoader,
+        action: playAction,
     },
     {
         path: '/rules',
@@ -47,6 +52,27 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         hydrateFallbackElement: <FullscreenLoader />,
         loader: startGameLoader,
+    },
+    {
+        path: '/next-level',
+        element: <ErrorPage />,
+        errorElement: <ErrorPage />,
+        hydrateFallbackElement: <FullscreenLoader />,
+        action: nextLevelAction,
+    },
+    {
+        path: '/finish-game',
+        element: <ErrorPage />,
+        errorElement: <ErrorPage />,
+        hydrateFallbackElement: <FullscreenLoader />,
+        action: finishGameAction,
+    },
+    {
+        path: '/reset-game',
+        element: <ErrorPage />,
+        errorElement: <ErrorPage />,
+        hydrateFallbackElement: <FullscreenLoader />,
+        action: resetGameAction,
     },
 ]);
 
