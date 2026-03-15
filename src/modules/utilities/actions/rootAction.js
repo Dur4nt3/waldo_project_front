@@ -28,18 +28,12 @@ export default async function rootAction({ request }) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(startData),
-    }).catch(() => 502);
-
-    if (response === 502) {
-        return {
-            errors: "We've encountered a temporary error, try again later.",
-        };
-    }
+    }).catch(() => {
+        throw new Response(null, { status: 502 });
+    });
 
     if (response.status === 404) {
-        return {
-            errors: "We've encountered a temporary error, try again later.",
-        };
+        throw new Response(null, { status: 404 });
     }
 
     const results = await response.json();
