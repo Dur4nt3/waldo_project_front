@@ -4,15 +4,16 @@ import Root from './modules/routes/root/Root';
 import Play from './modules/routes/play/Play';
 import Rules from './modules/routes/rules/Rules';
 import FAQ from './modules/routes/faq/FAQ';
+import Leaderboard from './modules/routes/leaderboard/Leaderboard';
 
 import playLoader from './modules/utilities/loaders/playLoader';
 import startGameLoader from './modules/utilities/loaders/startGameLoader';
+import leaderboardLoader from './modules/utilities/loaders/leaderboardLoader';
 
 import rootAction from './modules/utilities/actions/rootAction';
 import playAction from './modules/utilities/actions/playAction';
 import nextLevelAction from './modules/utilities/actions/nextLevelAction';
 import resetGameAction from './modules/utilities/actions/resetGameAction';
-import finishGameAction from './modules/utilities/actions/finishGameAction';
 
 import FullscreenLoader from './modules/utilities/miscComponents/FullscreenLoader';
 
@@ -47,6 +48,13 @@ const router = createBrowserRouter([
         hydrateFallbackElement: <FullscreenLoader />,
     },
     {
+        path: '/leaderboard',
+        element: <Leaderboard />,
+        errorElement: <ErrorPage />,
+        hydrateFallbackElement: <FullscreenLoader />,
+        loader: leaderboardLoader,
+    },
+    {
         path: '/start-game',
         element: <ErrorPage />,
         errorElement: <ErrorPage />,
@@ -59,13 +67,6 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         hydrateFallbackElement: <FullscreenLoader />,
         action: nextLevelAction,
-    },
-    {
-        path: '/finish-game',
-        element: <ErrorPage />,
-        errorElement: <ErrorPage />,
-        hydrateFallbackElement: <FullscreenLoader />,
-        action: finishGameAction,
     },
     {
         path: '/reset-game',

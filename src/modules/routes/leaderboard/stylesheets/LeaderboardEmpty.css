@@ -1,0 +1,31 @@
+.empty-leaderboard-cont {
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+
+    background-color: var(--primary-extremely-low-opacity);
+    border: 1px solid var(--primary-color);
+    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+    backdrop-filter: blur(1.5px);
+
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.empty-leaderboard-cont .empty-title {
+    font-size: var(--fs-md);
+    font-weight: 700;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    color: var(--light-text);
+}
+
+.empty-leaderboard-cont .empty-description {
+    font-size: var(--fs-sm);
+    color: var(--light-text);
+    opacity: 0.85;
+}

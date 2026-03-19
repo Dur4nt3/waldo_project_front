@@ -1,5 +1,6 @@
 .rules-main,
-.faq-main {
+.faq-main,
+.leaderboard-main {
     width: 100%;
     flex-grow: 1;
     margin: 1rem 0;

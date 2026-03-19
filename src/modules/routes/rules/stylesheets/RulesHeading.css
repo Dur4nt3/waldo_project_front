@@ -15,7 +15,8 @@
     color: var(--primary-color);
 }
 
-.rules-heading .heading-divider {
+.rules-heading .heading-divider,
+.leaderboard-header .heading-divider {
     width: 4rem;
     height: 2px;
     background: var(--primary-color);

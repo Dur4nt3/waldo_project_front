@@ -6,7 +6,7 @@ export default function FinishGame() {
     const fetcher = useFetcher();
 
     return (
-        <fetcher.Form method='POST' action='/finish-game' className='finish-game-form'>
+        <fetcher.Form method='POST' action='/reset-game' className='finish-game-form'>
             <button
                 type='submit'
                 className='has-loader clear-button-design'

@@ -38,6 +38,10 @@
     --negative-color: #f71e43;
     --positive-color: #00e34f;
 
+    --gold-color: #ffd700;
+    --silver-color: #c0c8d4;
+    --bronze-color: #cd7f32;
+
     --primary-low-opacity: rgba(0, 212, 255, 0.7);
     --primary-half-opacity: rgba(0, 212, 255, 0.5);
     --primary-very-low-opacity: rgba(0, 212, 255, 0.2);
@@ -57,6 +61,15 @@
     --positive-half-opacity: rgba(0, 227, 79, 0.5);
     --positive-very-low-opacity: rgba(0, 227, 79, 0.2);
     --positive-extremely-low-opacity: rgba(0, 227, 79, 0.07);
+
+    --gold-low-opacity: rgba(255, 215, 0, 0.75);
+    --gold-extremely-low-opacity: rgba(255, 215, 0, 0.2);
+
+    --silver-low-opacity: rgba(192, 200, 212, 0.75);
+    --silver-extremely-low-opacity: rgba(192, 200, 212, 0.2);
+
+    --bronze-low-opacity: rgba(205, 127, 50, 0.75);
+    --bronze-extremely-low-opacity: rgba(205, 127, 50, 0.2);
 
     --primary-separator-border: rgba(0, 212, 255, 0.15);
 

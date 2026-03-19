@@ -37,7 +37,7 @@ export default function HomepageActions({ openModal }) {
                 </Link>
             </div>
 
-            <Link className='leaderboard-link'>Leaderboard</Link>
+            <Link className='leaderboard-link' to='/leaderboard'>Leaderboard</Link>
         </div>
     );
 }

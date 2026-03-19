@@ -1,0 +1,26 @@
+.leaderboard-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.leaderboard-header .header-above {
+    font-size: var(--fs-sm);
+    font-weight: 300;
+    letter-spacing: 0.28rem;
+    text-transform: uppercase;
+    color: var(--primary-half-opacity);
+}
+
+.leaderboard-header .header-content {
+    font-size: var(--fs-xxl);
+    font-weight: 700;
+    letter-spacing: 0.06rem;
+    text-transform: uppercase;
+    color: var(--light-text);
+    line-height: 1;
+}
+
+.leaderboard-header .header-content span {
+    color: var(--primary-color);
+}
